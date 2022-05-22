@@ -27,12 +27,7 @@
         </header>
     </div>
 
-    <div class="webform">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="webform__form d-flex justify-content-center">
-                        <form class="form__body" method="post" action="">
+                        <form  method="post" action="">
                             <div class="alert
                                 <?php
                                     if($message['success'] == TRUE){
@@ -63,9 +58,9 @@
                                 ?>
                             </div>
                             <div>
-                                <input class="webform__form-elem form__input _req"  id="names" type="text" name="name"
+                                <input   id="names" type="text" name="name"
                                     placeholder="Имя" value= "<?php print($value['name']); ?>" >
-                                    <div class="text-danger err "
+                                    <div 
                                         <?php
                                             if(!$error['name_empty'] && !$error['name']){
                                                 print('hidden');
@@ -82,9 +77,9 @@
                                     </div>
                             </div>
                              <div>
-                                <input class="webform__form-elem form__input _req _email" id="email" type="email" name="email"
+                                <input  id="email" type="email" name="email"
                                         placeholder="E-mail" value= "<?php print($value['email']); ?>">
-                                        <div class="text-danger err "
+                                        <div 
                                         <?php
                                             if(!$error['email_empty'] && !$error['email']){
                                                 print('hidden');
@@ -101,8 +96,8 @@
                                     </div>
                             </div>
                             <div>
-                                <textarea id="comment" class="webform__form-elem form__input _req" type="text" name="bio" placeholder="Биография" ><?php print($value['bio']); ?></textarea>
-                                <div class="text-danger err "
+                                <textarea id="comment"  type="text" name="bio" placeholder="Биография" ><?php print($value['bio']); ?></textarea>
+                                <div 
                                     <?php
                                         if(!$error['bio']){
                                             print('hidden');
@@ -116,10 +111,10 @@
                                         ?>
                                 </div>
                             </div>
-                            <div class="form_item form-group">
-                                <label for="formDate" style="color: white;">Дата рождения:</label>
-                                <input type="date" class="form_input form__input _req form-control w-50  bg-white rounded" name="year" id="dates" value="<?php print($value['year']); ?>">
-                                <div class="text-danger err "
+                            <div>
+                                <label for="formDate">Дата рождения:</label>
+                                <input type="date" name="year" id="dates" value="<?php print($value['year']); ?>">
+                                <div 
                                 <?php
                                         if(!$error['year']){
                                             print('hidden');
@@ -133,7 +128,7 @@
                                         ?>
                                 </div>
                             </div>
-                            <div class="gender">
+                            <div >
                                 <label style="margin-right: 5px;">Пол : </label>
                                 <div>
                                     <input type="radio" id="male" name="gender" value="m"
@@ -203,7 +198,7 @@
                                     ?>
                                 >
                                 <label for="16" id="16">16</label>
-                                <div class="text-danger err "
+                                <div 
                                 <?php
                                         if(!$error['limbs']){
                                             print('hidden');
@@ -217,7 +212,7 @@
                                         ?>
                                 </div>
                             </div>
-                            <div class="capabilities">
+                            <div >
                                 <select name="capabilities[]" size="2" multiple>
                                     <option value="s1"
                                         <?php
@@ -262,7 +257,7 @@
                                         ?>
                                 </div>
                             </div>
-                            <div class="form__checkbox">
+                            <div >
                                 <input class="checkbox__input _req" type="checkbox" id="userAgreement"  name="agree"
                                     <?php
                                         if($value['agree']){
@@ -270,9 +265,9 @@
                                         }
                                     ?>
                                 >
-                                 <label class="checkbox__label" for="userAgreement">Отправляя заявку, я даю согласие на<a>обработку своих персональных данных</a>.<span>*</span></label>
+                                 <label for="userAgreement">Отправляя заявку, я даю согласие на<a>обработку своих персональных данных</a>.<span>*</span></label>
                             </div>
-                            <div class="text-danger err "
+                            <div 
                             <?php
                                         if(!$error['agree']){
                                             print('hidden');
@@ -290,11 +285,6 @@
                                 <input class="webform__form-btn" type="submit" name="submit" value="Отправить">
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   <script src="js/script.js"></script>
+
 </body>
 </html>

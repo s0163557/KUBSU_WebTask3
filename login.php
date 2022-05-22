@@ -80,11 +80,7 @@ if(mysqli_num_rows($check_user) > 0){//Проверка на то существ
             }
             ?>
         </div>
-        <div class="popup" id="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <div class="popup__title">Вход</div>
-                    <div class="popup__text">
+                    <div>Вход</div>
                             <div>
                                 <input type="text" name="login" class="login__elem" placeholder="Логин">
                             </div>
@@ -94,10 +90,7 @@ if(mysqli_num_rows($check_user) > 0){//Проверка на то существ
                         <div>
                             <input type="submit" class="popup__btn" value="Войти" name="do_login">
                         </div>
-                    </div>
                 </div>
-            </div>
-        </div>
     </form>
 </body>
 </html>
